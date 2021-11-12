@@ -17,19 +17,15 @@ jobs:
       - run:
           command: pwd
       - run:
-          command: sudo apt-get update 
+          command: ls
       - run:
-          command: sudo apt-get install openjdk-8-jdk 
+          command: cd test
       - run:
-          command: java -version
-      - run:
-          command: javac TotalFormTest.java
-      - run:
-          command: java TotalFormTest.java
-
+          command: pwd
+    
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
   say-hello-workflow:
     jobs:
-        - say-hello
+      - say-hello
