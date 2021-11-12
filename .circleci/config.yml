@@ -17,7 +17,7 @@ jobs:
       - run:
           command: cd test/counter
       - run:
-          command: cd  
+          command: pwd 
       - run:
           command: javac TotalFormTest.java
       - run:
