@@ -23,9 +23,9 @@ jobs:
       - run:
           command: java -version
       - run:
-          command: sudo apt-get install junit
+          command: sudo apt-get install junit4
       - run:
-          command: junit -version
+          command: junit --version
       - run:
           command: javac test/counter/TotalFormTest.java && pwd
       - run:
