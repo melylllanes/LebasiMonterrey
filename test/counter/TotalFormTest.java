@@ -8,12 +8,14 @@ package counter;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+import junit.framework.TestCase;
+
 
 /**
  *
  * @author melissa.a.lopez
  */
-public class TotalFormTest {
+public class TotalFormTest extends TestCase {
 
     /**
      * Test of getLatas method, of class TotalForm.
