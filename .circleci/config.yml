@@ -25,12 +25,9 @@ jobs:
       - run:
           command: sudo apt-get install junit4
       - run:
-          command: junit --version
+          command: javac -cp /usr/share/java/junit4.jar test/counter/TotalFormTest.java && pwd
       - run:
-          command: javac test/counter/TotalFormTest.java && pwd
-      - run:
-          command: java test/counterTotalFormTest.java && pwd
-    
+          command: java -cp /usr/share/java/junit4.jar:. org.junit.runner.JUnitCore TestBasicLinkedList test/counter/TotalFormTest
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
