@@ -15,7 +15,7 @@ jobs:
     steps:
       - checkout
       - run:
-          command: cd test\counter
+          command: cd test/counter
       - run:
           command: cd  
       - run:
