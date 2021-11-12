@@ -15,9 +15,11 @@ jobs:
     steps:
       - checkout
       - run:
-          command: cd test/counter
+          command: sudo apt-get update 
       - run:
-          command: pwd 
+          command: sudo apt-get install openjdk-8-jdk 
+      - run:
+          command: java -version
       - run:
           command: javac TotalFormTest.java
       - run:
