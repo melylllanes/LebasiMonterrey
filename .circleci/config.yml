@@ -25,6 +25,12 @@ jobs:
       - run:
           command: sudo apt-get install junit4
       - run:
+          command: export CLASSPATH=$CLASSPATH:~/java/junit4.12/junit-4.10.jar
+      - run:
+          command: export CLASSPATH=$CLASSPATH:~/java/junit4.12/
+      - run:
+          command: java org.junit.runner.JUnitCore org.junit.tests.AllTests
+      - run:
           command: javac -cp /usr/share/java/junit4.jar test/counter/TotalFormTest.java && pwd
       - run:
           command: java -cp /usr/share/java/junit4.jar:. org.junit.runner.JUnitCore TestBasicLinkedList test/counter/TotalFormTest
