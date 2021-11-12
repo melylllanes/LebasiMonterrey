@@ -17,11 +17,15 @@ jobs:
       - run:
           command: pwd
       - run:
-          command: ls
+          command: sudo apt-get update 
       - run:
-          command: cd test
+          command: sudo apt-get install openjdk-8-jdk 
       - run:
-          command: pwd
+          command: java -version
+      - run:
+          command: javac test/counter/TotalFormTest.java && pwd
+      - run:
+          command: java test/counterTotalFormTest.java && pwd
     
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
